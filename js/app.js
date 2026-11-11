@@ -3,7 +3,7 @@ const CONFIG = {
   institution: "INSTITUCIÓN",
   title: "Instructivo institucional",
   description: "Consulta los documentos en orden. Al completar los ocho apartados podrás continuar al formulario correspondiente.",
-  formUrl: "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT_EXEC",
+  formUrl: "https://script.google.com/a/macros/isseg.gob.mx/s/AKfycbzQd2sPuD8mnx4AYlfbe-1r21epjOh7TQTcNgqV58Lu09L9X2yvL0U7fn1pIon4I7P_/exec",
   documents: [
     { title: "Instructivo 1", file: "assets/documentos/01.pdf" },
     { title: "Instructivo 2", file: "assets/documentos/02.pdf" },
