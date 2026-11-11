@@ -9,10 +9,7 @@ const CONFIG = {
     { title: "Instructivo 2", file: "assets/documentos/02.pdf" },
     { title: "Instructivo 3", file: "assets/documentos/03.pdf" },
     { title: "Instructivo 4", file: "assets/documentos/04.pdf" },
-    { title: "Instructivo 5", file: "assets/documentos/05.pdf" },
-    { title: "Instructivo 6", file: "assets/documentos/06.pdf" },
-    { title: "Instructivo 7", file: "assets/documentos/07.pdf" },
-    { title: "Instructivo 8", file: "assets/documentos/08.pdf" }
+    { title: "Instructivo 5", file: "assets/documentos/05.pdf" }
   ]
 };
 
