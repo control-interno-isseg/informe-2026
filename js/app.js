@@ -207,9 +207,6 @@ async function loadStep(index) {
     $("step-heading").textContent =
         `Paso ${index + 1}`;
 
-    $("document-kicker").textContent =
-        ` ${String(index + 1).padStart(2, "0")}`;
-
     $("document-title").textContent =
         doc.title;
 
