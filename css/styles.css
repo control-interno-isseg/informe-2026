@@ -115,3 +115,54 @@ h1 { margin: 0; color: var(--navy-dark); font-size: clamp(2.25rem, 5vw, 4rem); l
 .pdf-annotations { position: absolute; inset: 0; overflow: hidden; }
 .pdf-annotations a { position: absolute; display: block; border-radius: 2px; background: rgba(40, 103, 168, 0); }
 .pdf-annotations a:hover { background: rgba(40, 103, 168, .12); outline: 1px solid rgba(40, 103, 168, .45); }
+
+
+
+
+/* Contenedor principal del visor */
+.pdf-viewer {
+    width: 100%;
+    height: calc(100vh - 180px);
+    min-height: 500px;
+    overflow: auto;
+    background: #e9edf2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Página PDF */
+.pdf-page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Canvas del documento */
+#pdf-canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .pdf-viewer {
+        height: calc(100dvh - 190px);
+        min-height: 400px;
+        padding: 8px 4px;
+        justify-content: flex-start;
+    }
+
+    .pdf-page {
+        justify-content: flex-start;
+    }
+
+    #pdf-canvas {
+        max-width: 100%;
+    }
+}
