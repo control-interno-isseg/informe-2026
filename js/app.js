@@ -205,3 +205,32 @@ function getInitialZoom() {
         ? 0.50
         : 0.70;
 }
+
+
+
+
+async function renderPage(pageNumber) {
+    const page = await currentPdf.getPage(pageNumber);
+
+    const scale = getInitialZoom();
+    const viewport = page.getViewport({ scale });
+
+    const canvas = document.getElementById("pdf-canvas");
+    const context = canvas.getContext("2d");
+
+    const pixelRatio = window.devicePixelRatio || 1;
+
+    canvas.width = Math.floor(viewport.width * pixelRatio);
+    canvas.height = Math.floor(viewport.height * pixelRatio);
+
+    canvas.style.width = `${viewport.width}px`;
+    canvas.style.height = `${viewport.height}px`;
+
+    await page.render({
+        canvasContext: context,
+        viewport: viewport,
+        transform: pixelRatio !== 1
+            ? [pixelRatio, 0, 0, pixelRatio, 0, 0]
+            : null
+    }).promise;
+}
