@@ -1,8 +1,8 @@
 /* CONFIGURACIÓN: personaliza estos valores antes de publicar. */
 const CONFIG = {
-  institution: "INSTITUCIÓN",
-  title: "Instructivo institucional",
-  description: "Consulta los documentos en orden. Al completar los ocho apartados podrás continuar al formulario correspondiente.",
+  institution: "Informe de Control Interno 2026",
+  title: "Instructivo",
+  description: "Consulta los documentos en orden. Al completar los cinco apartados podrás continuar a la plataforma.",
   formUrl: "https://script.google.com/a/macros/isseg.gob.mx/s/AKfycbzQd2sPuD8mnx4AYlfbe-1r21epjOh7TQTcNgqV58Lu09L9X2yvL0U7fn1pIon4I7P_/exec",
   documents: [
     { title: "Instructivo 1", file: "assets/documentos/01.pdf" },
@@ -204,33 +204,4 @@ function getInitialZoom() {
     return window.matchMedia("(max-width: 768px)").matches
         ? 0.50
         : 0.70;
-}
-
-
-
-
-async function renderPage(pageNumber) {
-    const page = await currentPdf.getPage(pageNumber);
-
-    const scale = getInitialZoom();
-    const viewport = page.getViewport({ scale });
-
-    const canvas = document.getElementById("pdf-canvas");
-    const context = canvas.getContext("2d");
-
-    const pixelRatio = window.devicePixelRatio || 1;
-
-    canvas.width = Math.floor(viewport.width * pixelRatio);
-    canvas.height = Math.floor(viewport.height * pixelRatio);
-
-    canvas.style.width = `${viewport.width}px`;
-    canvas.style.height = `${viewport.height}px`;
-
-    await page.render({
-        canvasContext: context,
-        viewport: viewport,
-        transform: pixelRatio !== 1
-            ? [pixelRatio, 0, 0, pixelRatio, 0, 0]
-            : null
-    }).promise;
 }
