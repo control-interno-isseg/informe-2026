@@ -11,11 +11,11 @@ const CONFIG = {
     formUrl: "https://script.google.com/a/macros/isseg.gob.mx/s/AKfycbzQd2sPuD8mnx4AYlfbe-1r21epjOh7TQTcNgqV58Lu09L9X2yvL0U7fn1pIon4I7P_/exec",
 
     documents: [
-        { title: "Instructivo 1", file: "assets/documentos/01.pdf" },
-        { title: "Instructivo 2", file: "assets/documentos/02.pdf" },
-        { title: "Instructivo 3", file: "assets/documentos/03.pdf" },
-        { title: "Instructivo 4", file: "assets/documentos/04.pdf" },
-        { title: "Instructivo 5", file: "assets/documentos/05.pdf" }
+        { title: "Usa tu correo institucional", file: "assets/documentos/01.pdf" },
+        { title: "Encuentra tu área en el desplegable", file: "assets/documentos/02.pdf" },
+        { title: "Consulta el total de tus requerimientos", file: "assets/documentos/03.pdf" },
+        { title: "Revisa la redacción y fechas límite", file: "assets/documentos/04.pdf" },
+        { title: "Carga evidencias y actualiza", file: "assets/documentos/05.pdf" }
     ]
 };
 
@@ -208,7 +208,7 @@ async function loadStep(index) {
         `Apartado ${index + 1}`;
 
     $("document-kicker").textContent =
-        `DOCUMENTO ${String(index + 1).padStart(2, "0")}`;
+        `PASO ${String(index + 1).padStart(2, "0")}`;
 
     $("document-title").textContent =
         doc.title;
