@@ -6,7 +6,7 @@
 const CONFIG = {
     institution: "Instituto de Seguridad Social del Estado de Guanajuato",
     title: "Instructivo para la carga documental del Informe de Control Interno 2026",
-    description: "Esta herramienta ha sido diseñada para orientar y facilitar, de manera secuencial e interactiva, la integración del Informe de Control Interno 2026, mediante el registro puntual, preciso y ordenado de la información requerida.",
+    description: "Esta herramienta ha sido diseñada para orientar y facilitar, de manera secuencial e interactiva, la integración del Informe de Control Interno 2026.",
 
     formUrl: "https://script.google.com/a/macros/isseg.gob.mx/s/AKfycbzQd2sPuD8mnx4AYlfbe-1r21epjOh7TQTcNgqV58Lu09L9X2yvL0U7fn1pIon4I7P_/exec",
 
