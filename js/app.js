@@ -1,6 +1,6 @@
 /* CONFIGURACIÓN: personaliza estos valores antes de publicar. */
 const CONFIG = {
-  institution: "Informe de Control Interno 2026",
+  institution: "ISSEG",
   title: "Instructivo",
   description: "Consulta los documentos en orden. Al completar los cinco apartados podrás continuar a la plataforma.",
   formUrl: "https://script.google.com/a/macros/isseg.gob.mx/s/AKfycbzQd2sPuD8mnx4AYlfbe-1r21epjOh7TQTcNgqV58Lu09L9X2yvL0U7fn1pIon4I7P_/exec",
