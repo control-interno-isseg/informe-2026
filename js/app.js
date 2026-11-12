@@ -199,3 +199,9 @@ $("restart-button").addEventListener("click", () => {
   loadStep(0);
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+function getInitialZoom() {
+    return window.matchMedia("(max-width: 768px)").matches
+        ? 0.50
+        : 0.70;
+}
