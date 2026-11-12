@@ -204,9 +204,6 @@ async function loadStep(index) {
 
     const doc = CONFIG.documents[index];
 
-    $("step-heading").textContent =
-        `Paso ${index + 1}`;
-
     $("document-title").textContent =
         doc.title;
 
